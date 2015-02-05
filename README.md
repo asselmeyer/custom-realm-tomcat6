@@ -3,9 +3,14 @@
 ## Introduction 
 Implementing a custom security realm for Apache Tomcat is not too hard, but the documentation is rather sparse. The best example I could find is the one by Mikkel Flindt Heisterberg on [lekkimworld.com](http://lekkimworld.com/2005/07/29/writing_a_custom_tomcat_login_module_realm.html)
 
-I try to provide a complete and working example. The focus lies on the necessary steps to build a custom realm. To add some "real" functionality not provided by the standard realm implementations in Tomcat 6, the custom realm uses salted and iterated password hashes.
+In the projects here I try to provide a complete and working example. The focus lies on the necessary steps to build a custom realm. To add some "real" functionality not provided by the standard realm implementations in Tomcat 6, the custom realm uses salted and iterated password hashes.
 
-An example for Tomcat 7 might follow, the standard realm implementations in Tomcat 8 already support [salted and iterated password hashes](http://tomcat.apache.org/tomcat-8.0-doc/realm-howto.html#Digested_Passwords)
+### Why Tomcat 6?
+Basically because writing a custom realm for Tomcat 6 was part of a project at work. I figured that Tomcat 6 is an old Tomcat version that still might be in use here and there and that the lack of support for salted and iterated hashes in the standard realm implementations might be an actual reason to write a custom realm.
+
+### What about newer Tomcat versions?
+
+Examples for later Tomcat versions might follow, but the steps are pretty much the same. Note that as of Tomcat 8, the standard realm implementations support [salted and iterated password hashes](http://tomcat.apache.org/tomcat-8.0-doc/realm-howto.html#Digested_Passwords).
 
 ## Overview
 To implement and use a custom realm with Tomcat 6 one has basically to go through these steps:

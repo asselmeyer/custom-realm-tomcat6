@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<mbeans-descriptors>
+
+    <mbean        name="CustomRealm"
+             className="org.apache.catalina.mbeans.ClassNameMBean"
+           description="Custom Realm implementation with supoort for salted and iterated password hashes"
+                domain="Catalina"
+                 group="Realm"
+                   type="com.asselmeyer.catalina.realm.CustomRealm">
+               
+        <attribute name="className"
+            description="Fully qualified class name of the managed object"
+                   type="java.lang.String"
+              writeable="false" />
+
+        <operation name="start" description="Start" impact="ACTION" returnType="void" />
+        <operation name="stop" description="Stop" impact="ACTION" returnType="void" />
+        <operation name="init" description="Init" impact="ACTION" returnType="void" />
+        <operation name="destroy" description="Destroy" impact="ACTION" returnType="void" />
+    </mbean>
+
+</mbeans-descriptors>
